@@ -66,34 +66,67 @@ nav.forEach(function (e){
 let ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.innerHTML = "<br>DOM<br> IS <br>AWESOME<br>";
 
+// Event Listener 1
 ctaH1.addEventListener('mouseover', () => {
   ctaH1.style.color = "pink";
 })
 
+
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.innerHTML = siteContent["cta"]["button"];
+
+// Event Listener 2
 ctaButton.addEventListener('click', () => {
   ctaButton.style.opacity = "0";
 })
 
 let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+  ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// Event Listener 3
+ctaImg.addEventListener('dblclick', () => {
+  ctaImg.style.border = "2px solid blue"
+})
 
 let mainContentH4 = document.querySelectorAll(".top-content .text-content h4");
 mainContentH4[0].innerHTML = siteContent["main-content"]["features-h4"];
 mainContentH4[1].innerHTML = siteContent["main-content"]["about-h4"]
 
+// Event Listener 4
+document.addEventListener("keydown", event => {
+  if (event.key == "p") {
+    document.querySelector(".main-content .top-content .text-content h4").style.color = "orange";
+  } 
+});
+
 let mainContentText = document.querySelectorAll(".top-content .text-content p");
 mainContentText[0].innerHTML = siteContent["main-content"]["features-content"];
 mainContentText[1].innerHTML = siteContent["main-content"]["about-content"];
 
+// Event Listener 5
+document.addEventListener("mouseleave", () => {
+  document.querySelector(".top-content").style.color = "yellow";
+})
+
+
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Event Listener 6
+middleImg.addEventListener("mouseenter", () => {
+  middleImg.style.opacity = ".5"
+})
+
 
 let mainContenth4 = document.querySelectorAll(".bottom-content .text-content h4");
 mainContenth4[0].innerHTML = siteContent["main-content"]["services-h4"];
 mainContenth4[1].innerHTML = siteContent["main-content"]["product-h4"];
 mainContenth4[2].innerHTML = siteContent["main-content"]["vision-h4"];
+
+// Event Listener 7
+document.addEventListener("mousemove", () => {
+  document.querySelector(".bottom-content").style.color = "purple"
+});
 
 let mainContentBot = document.querySelectorAll(".bottom-content .text-content p");
 mainContentBot[0].innerHTML = siteContent["main-content"]["services-content"];
@@ -108,8 +141,21 @@ contactP[0].innerHTML = siteContent["contact"]["address"];
 contactP[1].innerHTML = siteContent["contact"]["phone"];
 contactP[2].innerHTML = siteContent["contact"]["email"];
 
+// Event Listener 9
+document.addEventListener("mouseup", () => {
+  document.querySelector(".contact").style.color = "red";
+})
+
 let footer = document.querySelector("footer");
 footer.innerHTML = siteContent["footer"]["copyright"];
+
+// Event Listener 10
+document.addEventListener("keyup", event => {
+  if (event.key == "m") {
+  alert('This is the footer')
+  }
+})
+
 
 
 
