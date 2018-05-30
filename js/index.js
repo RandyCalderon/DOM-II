@@ -136,6 +136,11 @@ mainContentBot[2].innerHTML = siteContent["main-content"]["vision-content"];
 let contactHeader = document.querySelector(".contact h4");
 contactHeader.innerHTML = siteContent["contact"]["contact-h4"];
 
+// Event Listener 8 - Old syntax?
+document.addEventListener("mousedown", () => {
+  document.querySelector("nav").style.opacity = "0";
+});
+
 let contactP = document.querySelectorAll(".contact p");
 contactP[0].innerHTML = siteContent["contact"]["address"];
 contactP[1].innerHTML = siteContent["contact"]["phone"];
